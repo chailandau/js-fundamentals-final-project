@@ -208,14 +208,19 @@ h3.search-term {
   margin-top: 2rem;
 }
 
-.button {
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #4c20d3;
+  color: white;
+}
+
+.radioLabel {
   display: inline-block;
   margin-top: 1.5rem;
   margin-right: 1rem;
-}
-
-.button a {
-  display: block;
   background-color: #e6fbff;
   border: 1px solid #4c20d3;
   padding: 1rem;
@@ -223,6 +228,24 @@ h3.search-term {
   text-decoration: none;
   font-weight: 800;
   font-size: 1.25rem;
+}
+
+button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  background-color: #e6fbff;
+  border: 1px solid #4c20d3;
+  padding: 1rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+button:hover {
+  background-color: #4c20d3;
+  color: white;
 }
 
 .button-group {
@@ -334,3 +357,4 @@ input {
     font-size: 2rem;
   }
 }
+/*# sourceMappingURL=styles.css.map */

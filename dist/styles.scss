@@ -206,19 +206,41 @@ h3 {
     }
 }
 
-.button {
+input[type="radio"] {
+    display: none;
+    &:checked + label {
+        background-color: $color-purple;
+        color: white;
+    }
+}
+
+.radioLabel {
     display: inline-block;
     margin-top: 1.5rem;
     margin-right: 1rem;
-    a {
-        display: block;
-        background-color: $color-blue;
-        border: 1px solid $color-purple;
-        padding: 1rem;
-        color: black;
-        text-decoration: none;
-        font-weight: 800;
-        font-size: 1.25rem;
+    background-color: $color-blue;
+    border: 1px solid $color-purple;
+    padding: 1rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+    background-color: $color-blue;
+    border: 1px solid $color-purple;
+    padding: 1rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.25rem;
+    &:hover {
+        background-color: $color-purple;
+        color: white;
     }
 }
 
