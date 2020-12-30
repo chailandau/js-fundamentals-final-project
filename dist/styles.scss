@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700&display=swap");
+
+// Colors
+$color-blue: #e6fbff;
+$color-purple: #4c20d3;
+
+// Breakpoints
+$breakpoint-sm: 600px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xlg: 1200px;
+$breakpoint-xxlg: 1440px;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+    padding: 1rem 1.25rem;
+}
+
+.logo {
+    margin-bottom: 1rem;
+    img {
+        width: 20rem;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.hero {
+    background-color: $color-blue;
+    border: 1px solid $color-purple;
+    width: 100%;
+    .text {
+        padding: 1.5rem;
+        align-self: center;
+    }
+    h1 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        line-height: 1.75rem;
+        font-style: italic;
+    }
+    h2 {
+        font-size: 1.75rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        line-height: 2.5rem;
+    }
+    .gif {
+        margin-bottom: -3px;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+}
+
+.hero {
+    margin-top: 1rem;
+}
+
+.search {
+    margin: 2rem 0;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    &.search-term {
+        margin-top: 2rem;
+    }
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+    a {
+        display: block;
+        background-color: $color-blue;
+        border: 1px solid $color-purple;
+        padding: 1rem;
+        color: black;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 1.25rem;
+    }
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+input {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-top: 0.75rem;
+    font-size: 1rem;
+}
+
+.internal-wrapper {
+    padding: 0 1.25rem;
+}
+
+@media only screen and (min-width: $breakpoint-md) {
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        .text {
+            flex-basis: 50%;
+        }
+        .gif {
+            flex-basis: 50%;
+        }
+    }
+    .wrapper {
+        padding: 2rem 6rem;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg) {
+    .hero {
+        .text {
+            flex-basis: 60%;
+            padding: 0 2.5rem;
+        }
+        .gif {
+            flex-basis: 40%;
+        }
+        h1 {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+    }
+    p {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    .search {
+        margin-top: 3rem;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-xlg) {
+    .wrapper {
+        padding: 2rem 10rem;
+    }
+    .hero {
+        .text {
+            padding: 0 4rem;
+        }
+    }
+    h3 {
+        font-size: 1.5rem;
+        &.search-term {
+            margin-top: 3rem;
+        }
+    }
+    .search {
+        margin-top: 4rem;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-xxlg) {
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .hero {
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        h2 {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+        }
+        p {
+            font-size: 1.5rem;
+            line-height: 2.25rem;
+        }
+    }
+    h3 {
+        font-size: 2rem;
+    }
+}
