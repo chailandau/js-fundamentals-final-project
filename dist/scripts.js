@@ -1,47 +1,45 @@
 ( function() 
 {
-  // API call
-  let apiCall = async() => 
-  {
-    let apiKey = "05BEAHZ43U53";
-    try
-    {
-      let data = await axios(
-        "https://api.tenor.com/v1/search?q=cats&key=" + apiKey
-      );
-      return data;
-    }
-    catch( err ) 
-    {
-      return console.error( "Error:", err );
-    }
-  };
-  
+  // define search input
+  const searchGifs = document.querySelector( "#search_gifs" );
   // define buttons
   const button1 = document.querySelector( "#button_1" );
   const button4 = document.querySelector( "#button_4" );
   const button10 = document.querySelector( "#button_10" );
   const buttonSurprise = document.querySelector( "#button_surprise" );
-  const buttonParty = document.querySelector( "#button_party" );
-  // define search input
-  const searchGifs = document.querySelector( "#search_gifs" );
   //define form
   const gifForm = document.querySelector( "#gif_form" );
   // define gif results
   const gifResults = document.querySelector( "#gif_results" );
 
-  // After API is loaded...
-  apiCall().then( gifs => 
+  gifForm.addEventListener ( "submit", event=> 
   {
-    let result1 = gifs.data.results[1];
-    console.log( result1.media[0].gif.url );
-    gifForm.addEventListener ( "submit", event=> 
+    event.preventDefault();
+    // API call
+    let apiCall = async() => 
     {
-      event.preventDefault();
+      let apiKey = "05BEAHZ43U53";
+      try
+      {
+        let data = await axios(
+          `https://api.tenor.com/v1/search?q=${searchGifs.value}&key=${apiKey}`
+        );
+        return data;
+      }
+      catch( err ) 
+      {
+        return console.error( "Error:", err );
+      }
+    };
+    // After API is loaded...
+    apiCall().then( gifs => 
+    {
+      let result1 = gifs.data.results[1];
+      console.log( result1.media[0].gif.url );
       const searchTitle = document.createElement( "p" );
       searchTitle.textContent = searchGifs.value;
       gifResults.appendChild( searchTitle );
-  
+
       console.log( searchGifs.value );
       if( button1.checked ) 
       { 
