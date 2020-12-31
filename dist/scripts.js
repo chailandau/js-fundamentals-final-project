@@ -3,10 +3,11 @@
   // API call
   let apiCall = async() => 
   {
+    let apiKey = "05BEAHZ43U53";
     try
     {
       let data = await axios(
-        "https://api.tenor.com/v1/search?cats"
+        "https://api.tenor.com/v1/search?cats&key=" + apiKey
       );
       return data;
     }
@@ -32,8 +33,8 @@
   // After API is loaded...
   apiCall().then( gifs => 
   {
-    let apiKey = "05BEAHZ43U53";
-    console.log( gifs.data.results[0].url );
+    let result1 = gifs.data.results[0];
+    console.log( result1.media[0].gif.url );
     gifForm.addEventListener ( "submit", event=> 
     {
       event.preventDefault();
@@ -45,7 +46,7 @@
       if( button1.checked ) 
       { 
         const image = document.createElement( "img" );
-        image.src = gifs.data.results[0].url + "&key=" + apiKey;
+        image.src = result1.media[0].gif.url;
         gifResults.appendChild( image );    
       }
       else if( button4.checked ) 
