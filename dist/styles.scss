@@ -206,8 +206,22 @@ h3 {
     }
 }
 
+.search-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    margin-bottom: 2rem;
+}
+
 input[type="radio"] {
-    display: none;
+    display: inline;
+    width: 1px;
+    margin: 0;
+    padding: 0;
+    & + label {
+        position: relative;
+        top: -20px;
+    }
     &:checked + label {
         background-color: $color-purple;
         color: white;
@@ -247,6 +261,7 @@ button {
 .button-group {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 input {
     width: 100%;

@@ -208,8 +208,23 @@ h3.search-term {
   margin-top: 2rem;
 }
 
+.search-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  margin-bottom: 2rem;
+}
+
 input[type="radio"] {
-  display: none;
+  display: inline;
+  width: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  top: -20px;
 }
 
 input[type="radio"]:checked + label {
@@ -254,6 +269,7 @@ button:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 input {

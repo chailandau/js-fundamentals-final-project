@@ -41,6 +41,7 @@
                                 value="1"
                                 id="button_1"
                                 name="gif_amount"
+                                required
                             />
                             <label for="button_1" class="radioLabel">1</label>
 
@@ -66,24 +67,25 @@
                                 id="button_surprise"
                                 name="gif_amount"
                             />
-                            <label for="button_surprise" class="radioLabel"
-                                >surprise me</label
-                            >
                         </div>
                         <h3 class="search-term">Enter a search term</h3>
                         <input
                             type="text"
                             id="search_gifs"
                             placeholder="Fun GIFs coming your way!"
+                            required
                         />
                         <button id="button_party" type="submit">
                             party time!
                         </button>
                     </form>
+                    <div id="errors"></div>
                 </section>
             </div>
             <section>
-                <div id="gif_results"></div>
+                <div class="internal-wrapper">
+                    <div id="gif_results"></div>
+                </div>
             </section>
         </div>
     </body>
