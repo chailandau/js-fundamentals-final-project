@@ -1,5 +1,9 @@
 # tgiGIFS!
 
-tgiGIFs! utilizes Tenor Gifs' API to display GIFs.
+tgiGIFs! utilizes [Tenor](https://tenor.com/)'s API to display GIFs.
 
-Users can choose how many GIFs they want, and search for any keyword they want.
+You can choose however many GIFs you want, and search for any keyword you want.
+
+To get started, select how many GIFs you want, and type a term into the search box.
+
+Click the party time button and have fun!

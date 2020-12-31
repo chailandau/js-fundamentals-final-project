@@ -51,7 +51,6 @@
       gifResults.innerHTML = "";
       gifResults.appendChild( searchTitle );
 
-      console.log( searchGifs.value );
       if( button1.checked ) 
       { 
         const image = document.createElement( "img" );
@@ -120,7 +119,10 @@
       } 
       else
       { 
-        console.log( "error" );
+        const error = document.createElement( "p" );
+        error.className = "error";
+        error.textContent = "Yikes! Try refreshing.";
+        gifResults.appendChild( searchTitle );
       } 
     } );
   } );
