@@ -209,17 +209,7 @@ h3 {
         margin-top: 2rem;
     }
 }
-#gif_results {
-    display: flex;
-    flex-wrap: wrap;
-    img {
-        flex-basis: auto;
-        width: 46%;
-        padding: 1%;
-        height: auto;
-        object-fit: cover;
-    }
-}
+
 .search-title {
     font-size: 1.25rem;
     font-weight: 700;
@@ -327,6 +317,17 @@ footer {
     }
     .wrapper {
         padding: 2rem 6rem;
+    }
+    #gif_results {
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            flex-basis: auto;
+            width: 46%;
+            padding: 1%;
+            height: auto;
+            object-fit: cover;
+        }
     }
 }
 

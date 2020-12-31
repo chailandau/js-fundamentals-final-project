@@ -212,24 +212,6 @@ h3.search-term {
   margin-top: 2rem;
 }
 
-#gif_results {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-#gif_results img {
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
-  width: 46%;
-  padding: 1%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .search-title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -357,6 +339,22 @@ footer .wrapper {
   }
   .wrapper {
     padding: 2rem 6rem;
+  }
+  #gif_results {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #gif_results img {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    width: 46%;
+    padding: 1%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
