@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>tgi GIFs!</title>
         <link rel="stylesheet" href="styles.css" />
         <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
 
@@ -12,7 +12,11 @@
     <body>
         <div class="wrapper">
             <header class="logo">
-                <img src="img/logo.svg" alt="tgi GIFS! logo" />
+                <img
+                    onClick="window.location.reload();"
+                    src="img/logo.svg"
+                    alt="tgi GIFS! logo"
+                />
             </header>
 
             <section class="hero">
@@ -88,5 +92,21 @@
                 </div>
             </section>
         </div>
+        <footer>
+            <div class="wrapper">
+                <div class="internal-wrapper">
+                    <p>
+                        tgi GIFs! was created by
+                        <a href="https://chailandau.com" target="_blank"
+                            >Chai Landau</a
+                        >
+                        as her final project in JavaScript Fundamentals at
+                        <a href="https://albanycancode.org/" target="_blank"
+                            >AlbanyCanCode</a
+                        >.
+                    </p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

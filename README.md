@@ -1,3 +1,5 @@
-# TGI GIFS
+# tgiGIFS!
 
-This is my final JavaScript Fundamentals Project. The goal was to utilize an API.
+tgiGIFs! utilizes Tenor Gifs' API to display GIFs.
+
+Users can choose how many GIFs they want, and search for any keyword they want.

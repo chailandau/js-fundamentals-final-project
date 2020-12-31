@@ -142,6 +142,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 .logo img {
   width: 20rem;
   max-width: 100%;
@@ -208,11 +212,31 @@ h3.search-term {
   margin-top: 2rem;
 }
 
+#gif_results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#gif_results img {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  width: 46%;
+  padding: 1%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .search-title {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.75rem;
   margin-bottom: 2rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 input[type="radio"] {
@@ -225,6 +249,11 @@ input[type="radio"] {
 input[type="radio"] + label {
   position: relative;
   top: -20px;
+}
+
+input[type="radio"] + label:hover {
+  background-color: #4c20d3;
+  color: white;
 }
 
 input[type="radio"]:checked + label {
@@ -283,6 +312,30 @@ input {
 
 .internal-wrapper {
   padding: 0 1.25rem;
+}
+
+footer {
+  background-color: #fff5d8;
+  border-top: 1px solid #4c20d3;
+}
+
+footer a {
+  color: #4c20d3;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 0.85rem;
+}
+
+footer .wrapper {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
 }
 
 @media only screen and (min-width: 768px) {
