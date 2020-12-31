@@ -7,7 +7,7 @@
     try
     {
       let data = await axios(
-        "https://api.tenor.com/v1/search?cats&key=" + apiKey
+        "https://api.tenor.com/v1/search?q=cats&key=" + apiKey
       );
       return data;
     }
@@ -33,7 +33,7 @@
   // After API is loaded...
   apiCall().then( gifs => 
   {
-    let result1 = gifs.data.results[0];
+    let result1 = gifs.data.results[1];
     console.log( result1.media[0].gif.url );
     gifForm.addEventListener ( "submit", event=> 
     {
