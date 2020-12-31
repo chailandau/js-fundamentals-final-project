@@ -7,7 +7,6 @@
   const button1 = document.querySelector( "#button_1" );
   const button4 = document.querySelector( "#button_4" );
   const button10 = document.querySelector( "#button_10" );
-  const buttonSurprise = document.querySelector( "#button_surprise" );
   //define form
   const gifForm = document.querySelector( "#gif_form" );
   // define gif results
@@ -45,9 +44,11 @@
       let result8 = gifs.data.results[7];
       let result9 = gifs.data.results[8];
       let result10 = gifs.data.results[9];
+      // adds search content
       const searchTitle = document.createElement( "p" );
       searchTitle.className = "search-title";
       searchTitle.textContent = `You searched for... ${searchGifs.value}`;
+      // this is to refresh the content each time you hit submit
       gifResults.innerHTML = "";
       gifResults.appendChild( searchTitle );
 
@@ -122,7 +123,7 @@
         const error = document.createElement( "p" );
         error.className = "error";
         error.textContent = "Yikes! Try refreshing.";
-        gifResults.appendChild( searchTitle );
+        gifResults.appendChild( error );
       } 
     } );
   } );
