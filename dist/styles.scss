@@ -180,6 +180,11 @@ body {
     }
     .gif {
         margin-bottom: -3px;
+        height: 22.5rem;
+        img {
+            object-fit: cover;
+            height: 99.25%;
+        }
     }
 }
 
@@ -191,6 +196,7 @@ p {
     font-size: 1rem;
     line-height: 1.25rem;
     font-weight: 500;
+    margin-bottom: 0.5rem;
 }
 
 .hero {
@@ -342,7 +348,7 @@ footer {
         }
         h1 {
             font-size: 1.75rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         h2 {
             font-size: 3rem;
